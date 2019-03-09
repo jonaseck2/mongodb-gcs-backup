@@ -1,5 +1,5 @@
 image:
-  repository: zoov/mongodb-gcs-backup
+  repository: jonaseck/mongodb-gcs-backup
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -10,6 +10,10 @@ resources: {}
 #  requests:
 #    cpu: 100m
 #    memory: 128Mi
+
+env: {}
+# - name: GCS_BUCKET
+#   value: "gs://bucket-name/path"
 
 concurrencyPolicy: Forbid
 failedJobsHistoryLimit: 1
