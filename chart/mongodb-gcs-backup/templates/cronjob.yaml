@@ -31,6 +31,8 @@ spec:
               - name: gcp-credentials
                 mountPath: /secrets/gcp
                 readOnly: true
+              - name: temp-storage
+                mountPath: /backup
             resources:
   {{ toYaml .Values.resources | indent 12 }}
           restartPolicy: {{ .Values.restartPolicy }}
@@ -38,3 +40,5 @@ spec:
             - name: gcp-credentials
               secret:
                 secretName: {{ .Values.secretName }}
+            - name: temp-storage
+              emptyDir: {}

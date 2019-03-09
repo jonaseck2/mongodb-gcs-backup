@@ -6,7 +6,7 @@ set -o errtrace
 set -o nounset
 # set -o xtrace
 
-BACKUP_DIR=${BACKUP_DIR:-/tmp}
+BACKUP_DIR=${BACKUP_DIR:-/backup}
 BOTO_CONFIG_PATH=${BOTO_CONFIG_PATH:-/root/.boto}
 GCS_BUCKET=${GCS_BUCKET:-}
 GCS_KEY_FILE_PATH=${GCS_KEY_FILE_PATH:-}
